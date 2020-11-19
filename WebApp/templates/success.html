@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+
+{% block body %}
+<div class="tm-page-container mx-auto">
+    <header class="tm-header text-center">
+        <h1 class="tm-title text-uppercase">DNA Fingerprinting</h1>
+        <p class="tm-primary-color"><i>Mini Project</i></p>
+    </header>
+
+    <section class="tm-section">
+        <nav class="tm-nav">
+            <ul>
+                <li>
+                    <a href="/"><span class="tm-nav-deco"></span>Home</a>
+                </li>
+                <li class="active">
+                    <a href="/profiler"><span class="tm-nav-deco"></span>Profiler</a>
+                </li>
+                <li>
+                    <a href="/about"><span class="tm-nav-deco"></span>About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="tm-content-container">
+            <div class="mb-0 tm-img-overlay-wrap">
+                <div class="tm-img-overlay"></div>
+                <div class="tm-img-overlay-text text-white p-5">
+                    <h4 class="mb-4">Profiler</h4>
+                    <p class="tm-small">
+                        <h1>Profiling Result</h1>
+                    </p>
+                </div>
+            </div>
+            <div class="tm-content">
+                <p><b>{{ message }}</b> was found in the sequence you selected.</p>
+                <p>Click <a href="/profile">here</a> to try again.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>by Utkarsh Tyagi</span>
+        <span>ThemeCredits-TempMo</span>
+    </footer>
+</div>
+{% endblock %}

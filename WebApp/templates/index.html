@@ -1,0 +1,55 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Index DNA
+{% endblock %}
+
+{% block body %}
+<div class="tm-page-container mx-auto">
+  <header class="tm-header text-center">
+    <h1 class="tm-title text-uppercase">DNA FingerPrinting</h1>
+    <p class="tm-primary-color"><i>Mini Project</i></p>
+  </header>
+
+  <section class="tm-section">
+    <nav class="tm-nav">
+      <ul>
+        <li class="active">
+          <a href="/"><span class="tm-nav-deco"></span>Home</a>
+        </li>
+        <li>
+          <a href="/profile"><span class="tm-nav-deco"></span>Profiler</a>
+        </li>
+        <li>
+          <a href="/about"><span class="tm-nav-deco"></span>Info</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="tm-content-container">
+      <figure class="mb-0">
+        <!--https://www.biometricupdate.com/201912/genetics-specialist-calls-for-crack-down-on-dna-databases-and-biometric-companies-enabling-repression
+        Image Credit-->
+        <img src="{{ url_for('static', filename='img/dna-profile.jpg') }}" alt="Image" class="img-fluid tm-img" />
+      </figure>
+      <div class="tm-content">
+        <h2 class="tm-page-title">Basic DNA Profiling</h2>
+        <p class="mb-4">
+          This site serves as the front-end for a basic DNA profiling program written in <b>Python</b>.
+        </p>
+        <p>
+          To learn more about DNA profiling and its application in real world, click <a href="https://www.nature.com/scitable/topicpage/forensics-dna-fingerprinting-and-codis-736/">here</a>.
+        </p>
+        <p>
+          To know what sample databases and sequences are used in this WebApp go to <a href="/about">info</a>. 
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>by Utkarsh Tyagi</span>
+    <span>ThemeCredits-TempMo</span>
+  </footer>
+</div>
+{% endblock %}

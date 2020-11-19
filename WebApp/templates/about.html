@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}Downloads{% endblock %}
+
+{% block body %}
+
+<div class="tm-page-container mx-auto">
+<header class="tm-header text-center">
+    <h1 class="tm-title text-uppercase">DNA FingerPrinting</h1>
+    <p class="tm-primary-color"><i>Mini Project</i></p>
+    </header>
+
+    <div class="tm-section">
+      <nav class="tm-nav">
+        <ul>
+          <li>
+            <a href="/"><span class="tm-nav-deco"></span>Home</a>
+          </li>
+          <li>
+            <a href="/profile"><span class="tm-nav-deco"></span>Profiler</a>
+          </li>
+          <li class="active">
+            <a href="/about"><span class="tm-nav-deco"></span>Info</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="tm-content-container">
+        
+        <div class="tm-content">
+          <h2 class="tm-page-title">Information</h2>
+          <p class="mb-4">
+            You can see the databases and sequences currently used here.
+          </p>
+          <p>
+            Click the database you want to see.
+            <br>
+            <a href="database/large">Large</a> or <a href="database/small">Small</a>.
+          </p>
+          <form action="/sequence" method="POST" class="tm-contact-form">
+                        
+            <div class="form-group">
+                <label for="dfile_text">Sequence</label>
+                <select class="form-control" name="sequence_file" id="dfile_text">
+                    {% for sequence in sequences %}
+                        <option name={{ sequence }}>{{ sequence }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <div class="form-group text-right">
+                  <button type="submit" class="btn btn-primary rounded-0">
+                      Submit
+                  </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span>by Utkarsh Tyagi</span>
+        <span>ThemeCredits-TempMo</span>
+    </footer>
+</div>
+
+{% endblock %}
