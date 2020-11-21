@@ -69,7 +69,7 @@ def dblarge(db_selected):
 @app.route("/sequence", methods=["POST"])
 def sequence():
     seq_file = request.form.get("sequence_file")
-    return send_file(f"sequences/{seq_file}.txt")
+    return send_file(f"static/sequences/{seq_file}.txt")
 
 @app.route("/test")
 def test():
